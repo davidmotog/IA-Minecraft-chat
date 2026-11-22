@@ -1,0 +1,8 @@
+target/
+dist/
+.tools/
+.test-server/
+.env
+config.local.yml
+
+.env.*

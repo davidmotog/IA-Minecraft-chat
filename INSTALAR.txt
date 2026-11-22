@@ -1,0 +1,45 @@
+MINECRAFT IA 1.2.0 — PAPERMC 26.3 / JAVA 25
+
+1. Compila el proyecto con Java 25 y Maven usando mvn clean verify. Apaga Paper.
+2. Copia MinecraftIA-1.2.0.jar dentro de la carpeta plugins del servidor.
+   El archivo está en target dentro del proyecto.
+3. Arranca el servidor con Java 25. Se creará plugins/MinecraftIA/config.yml.
+4. Crea plugins/MinecraftIA/.env con la línea OPENAI_API_KEY=tu_clave.
+   Para leerlo desde otra carpeta, ajusta openai.env-file en config.yml.
+   El modelo configurado de inicio es gpt-5.4-mini.
+   Al actualizar, sustituye el JAR anterior y conserva la carpeta plugins/MinecraftIA.
+5. Desde la consola ejecuta: ia recargar
+   O, como operador dentro del juego: /ia recargar
+6. Prueba /ia receta piston y después /ia ¿Cómo encuentro diamantes?
+
+COMANDOS
+  /ia ayuda
+  /ia ¿Cómo encuentro diamantes?
+  /ia receta pistón
+  /ia receta pico de diamante
+  /ia receta minecraft:diamond_pickaxe
+  /ia foto https://tu-dominio.com/imagen.png ¿Qué es y cómo se fabrica?
+  @ia ¿Cómo consigo obsidiana?
+
+La dirección de imagen es un ejemplo: sustitúyela por un enlace real HTTPS,
+público y directo a una imagen. No sirve una ruta del PC ni una página con login.
+Minecraft normal no permite adjuntar fotos desde el chat.
+La receta aparece en una ventana con los objetos del juego, no como un PNG en chat.
+Si la IA reconoce un objeto, pulsa el botón verde para consultar su receta real.
+
+CLAVE DE IA
+  Crea/configura tu clave y el uso de API en https://platform.openai.com/api-keys
+  La API puede generar costes según tu cuenta y consumo. Revisa su facturación.
+  No hace falta clave para las recetas por identificador o alias incluido.
+  No publiques tu clave ni la escribas como comando de Minecraft.
+
+REQUISITOS
+  Servidor PaperMC 26.3 con Java 25. Los jugadores no necesitan mods.
+  Acceso HTTPS del servidor a api.openai.com para las consultas de IA.
+
+El límite es de 2.000.000 tokens por instalación y día UTC. Usa /ia estado para
+ver el consumo y las reservas. Conserva plugins/MinecraftIA/cuota/ al migrar.
+La IA recuerda hasta cuatro intercambios por jugador durante 30 minutos.
+Usa /ia olvidar para borrar tu conversación o memory.enabled: false para desactivarla.
+El JAR superó 29 pruebas automatizadas y pruebas con Paper y la API real.
+Lee README.md para detalles, permisos y limitaciones.

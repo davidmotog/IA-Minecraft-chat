@@ -1,0 +1,74 @@
+# El archivo .env tiene prioridad sobre la variable de entorno y api-key.
+openai:
+  env-file: '.env'
+  api-key: ''
+  model: 'gpt-5.4-mini'
+  timeout-seconds: 40
+  max-output-tokens: 1200
+limits:
+  cooldown-seconds: 8
+  concurrent-requests: 4
+  requests-per-minute: 20
+  max-question-characters: 1000
+  max-answer-characters: 1800
+chat:
+  # Escribe @ia seguido de tu pregunta; solo tú recibirás la respuesta.
+  enabled: true
+  prefix: '@ia'
+images:
+  enabled: true
+memory:
+  # Últimos 4 intercambios de cada jugador, hasta 30 minutos sin actividad.
+  enabled: true
+# Puedes añadir nombres en español. Los identificadores son los del juego.
+aliases:
+  piston: piston
+  piston pegajoso: sticky_piston
+  pico de diamante: diamond_pickaxe
+  pico de hierro: iron_pickaxe
+  pico de madera: wooden_pickaxe
+  espada de diamante: diamond_sword
+  mesa de crafteo: crafting_table
+  mesa de trabajo: crafting_table
+  horno: furnace
+  alto horno: blast_furnace
+  ahumador: smoker
+  cofre: chest
+  cofre de ender: ender_chest
+  antorcha: torch
+  antorchas: torch
+  palo: stick
+  palos: stick
+  tolva: hopper
+  observador: observer
+  repetidor: repeater
+  comparador: comparator
+  dispensador: dispenser
+  soltador: dropper
+  yunque: anvil
+  escudo: shield
+  cubo: bucket
+  cubeta: bucket
+  cama: red_bed
+  pan: bread
+  pastel: cake
+  tarta: cake
+  cristal: glass
+  vidrio: glass
+  papel: paper
+  libro: book
+  estanteria: bookshelf
+  libreria: bookshelf
+  escalera: ladder
+  tijeras: shears
+  brujula: compass
+  reloj: clock
+  bote: oak_boat
+  barca: oak_boat
+  mesa de encantamientos: enchanting_table
+  mesa de herreria: smithing_table
+  cortapiedras: stonecutter
+  linterna: lantern
+  farol: lantern
+  fogata: campfire
+  hoguera: campfire

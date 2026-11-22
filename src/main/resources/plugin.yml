@@ -1,0 +1,21 @@
+name: MinecraftIA
+version: 1.2.0
+main: es.david.minecraftia.MinecraftIaPlugin
+api-version: '26.3'
+description: Preguntas con IA, reconocimiento de imágenes y recetas reales del servidor.
+author: David
+commands:
+  ia:
+    description: Consulta a la IA o abre una receta.
+    usage: /ia ayuda
+    aliases: [minecraftia]
+permissions:
+  minecraftia.use:
+    description: Consultar a la IA y abrir recetas.
+    default: true
+  minecraftia.image:
+    description: Enviar enlaces de imágenes a la IA.
+    default: true
+  minecraftia.admin:
+    description: Ver estado y recargar configuración.
+    default: op
